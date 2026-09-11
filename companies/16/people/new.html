@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Novi kontakt za Sjeverna Analitika d.d.</title>
+  <meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="c6M4lMcxXkeReFlh2Aw7IPfWoCjQSMuRfD4M1SoBEfU="/>
+  <link href="../../../stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
+  <script src="../../../javascripts/prototype.js" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js" type="text/javascript"></script>
+<script src="../../../javascripts/rails.js" type="text/javascript"></script>
+<script src="../../../javascripts/livevalidation_prototype.js" type="text/javascript"></script>
+<script src="../../../javascripts/sortable.js" type="text/javascript"></script>
+<script src="../../../javascripts/application.js" type="text/javascript"></script>
+<body>
+  <a id="logo" href='../../../index.html'><img alt="BEST Zagreb logo" src="../../../images/logo.gif" /></a>
+  <h1>Novi kontakt za Sjeverna Analitika d.d.</h1>
+  <form accept-charset="UTF-8" action="#" onsubmit="return false" class="nice" id="new_person" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="c6M4lMcxXkeReFlh2Aw7IPfWoCjQSMuRfD4M1SoBEfU=" /></div>
+  <fieldset>
+    <p>
+      <label for='person_name'>Ime osobe</label>
+      <input id='person_name' name='person[name]' type='text' />
+    </p>
+            <script type='text/javascript'>
+              var person_name = new LiveValidation('person_name');
+              person_name.add(Validate.Presence).add(Validate.Format, { pattern: /^ +$/i, negate: true, failureMessage: '* required'});
+            </script>
+  
+    <p>
+      <label for='person_function'>Funkcija u kompaniji</label>
+      <input id='person_function' name='person[function]' type='text' />
+    </p>
+    <p>
+      <label for='person_email'>Email</label>
+      <input id='person_email' name='person[email]' type='text' />
+    </p>
+    <p>
+      <label for='person_phone'>Telefonski broj</label>
+      <input id='person_phone' name='person[phone]' type='text' />
+    </p>
+  </fieldset>
+  <fieldset class='actions'>
+    <input name="commit" type="submit" value="Stvori" />
+  </fieldset>
+</form>
+
+

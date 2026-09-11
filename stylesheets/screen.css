@@ -1,0 +1,215 @@
+body {
+  padding: 1.5em 0.5em 1.5em 1em;
+  font: medium/1.6 "Helvetica", "Arial", sans-serif;
+  font-size: 90%;
+}
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+  color: #666;
+}
+h1 {
+  font-size: 1.5em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: gray;
+  text-shadow: white 0 1px 1px;
+}
+img { border: none; }
+
+#logo { float: left; display: block; margin-right: 1.5em; }
+#logo + h1 { line-height: 52px; margin-top: 0; }
+#logo img {
+  max-width: 100px;
+}
+
+table {
+  border-collapse: collapse;
+  border: none;
+}
+table th {
+  text-align: left;
+  padding: .1em .6em;
+}
+table td { padding: .3em .6em; }
+table td {
+  border-top: 1px dotted silver;
+}
+table td.check {
+  text-align: center;
+}
+table td.check span {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: #46B85B;
+  padding: 1px 3px;
+  color: white;
+  font-size: 11px;
+}
+table tr.priority {
+  background-color: lemonchiffon;
+}
+.unicon, .unicon-small {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 15px;
+  color: #0071B9;
+  display: inline-block;
+  width: 25px;
+  text-align: center;
+  text-shadow: white 0 1px 1px;
+  vertical-align: middle;
+}
+.unicon-small { font-size: 24px; }
+
+form p label {
+  display: block;
+}
+form p input[type=text] {
+  width: 15em;
+  font-size: 1em;
+}
+form p textarea {
+  width: 20em;
+  font-size: 1em;
+  height: 8em;
+}
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+a:link, a:visited { color: darkblue; }
+a:hover { color: crimson; }
+a:active { color: firebrick; }
+
+ul.actions { padding-left: 0; }
+h1 + ul.actions { margin-top: -0.5em; }
+ul.actions li { display: inline; }
+ul.actions a, a.edit {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background-color: #ddd;
+  border: 1px solid #ddd;
+  background-image: -moz-linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,0));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.7)), to(rgba(255,255,255,0)));
+  padding: 3px 6px 1px 6px;
+  text-decoration: none;
+  color: #444;
+  text-transform: uppercase;
+  font-size: 11px;
+  text-shadow: white 1px 1px 1px;
+}
+ul.actions a:visited, a.edit:visited { color: black; }
+ul.actions a:hover, a.edit:hover {
+  color: black;
+  background-image: -moz-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.5));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), to(rgba(255,255,255,.5)));
+}
+
+dd.nice {
+  padding: 0.9em;
+  max-width: 50em;
+}
+
+form.nice, #filter, dd.nice {
+  background-color: #eee;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border: 1px solid #ddd;
+}
+form.nice {
+  width: 50em;
+}
+form.nice fieldset {
+  padding: 1em 2em;
+  width: 20em;
+  float: left;
+}
+form.nice fieldset.actions {
+  background-color: #dfdfdf;
+  width: auto;
+  clear: left;
+  float: none;
+}
+form.nice fieldset.actions input[type=submit],
+form.nice fieldset.actions a[data-method=delete] {
+  border: 2px solid white;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  font-size: 85%;
+  text-transform: uppercase;
+  color: white;
+  padding: 5px 10px;
+  background: #46B85B;
+  text-shadow: rgba(0,0,0,.5) 1px 1px 1px;
+}
+form.nice fieldset.actions a[data-method=delete] {
+  background-color: darkred;
+  float: right;
+  text-decoration: none;
+}
+
+#collaborations {
+  float: left;
+  margin: 0 1.5em 1.5em 0;
+  font-size: 13px;
+}
+#filter {
+  padding: 1em;
+  width: 10em;
+  float: left;
+  margin-bottom: 1.5em;
+}
+#filter p {
+  font-weight: bold;
+  margin: 0;
+}
+#filter ul {
+  list-style: none;
+  padding-left: 0;
+  margin: .5em 0;
+}
+#filter label {
+  cursor: pointer;
+  color: #666;
+  padding: .2em 0;
+}
+#filter label:hover { color: black; }
+
+dl dt {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: gray;
+}
+dl dd + dt { margin-top: 0.5em; }
+dl dd {
+  margin-left: 0;
+}
+
+#projects {
+  font-size: 1.8em;
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.4;
+}
+#projects li {
+  color: gray;
+  font-family: "Lucida Grande", "Helvetica", sans-serif;
+  font-weight: 700;
+}
+#projects a {
+  -webkit-transition: color .2s ease-out;
+  text-decoration: none;
+  text-shadow: #eee 2px 2px 1px;
+}
+.sortable th a{text-decoration: none;}
+
+#progress_bar {font-size: 1.1em;}
+#progress_bar td {border-top: none;}
+

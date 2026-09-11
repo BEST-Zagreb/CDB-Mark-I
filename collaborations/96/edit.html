@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Izmijeni suradnju s Tiha Analitika d.o.o.</title>
+  <meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="c6M4lMcxXkeReFlh2Aw7IPfWoCjQSMuRfD4M1SoBEfU="/>
+  <link href="../../stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
+  <script src="../../javascripts/prototype.js" type="text/javascript"></script>
+<script src="../../javascripts/effects.js" type="text/javascript"></script>
+<script src="../../javascripts/dragdrop.js" type="text/javascript"></script>
+<script src="../../javascripts/controls.js" type="text/javascript"></script>
+<script src="../../javascripts/rails.js" type="text/javascript"></script>
+<script src="../../javascripts/livevalidation_prototype.js" type="text/javascript"></script>
+<script src="../../javascripts/sortable.js" type="text/javascript"></script>
+<script src="../../javascripts/application.js" type="text/javascript"></script>
+<body>
+  <a id="logo" href='../../index.html'><img alt="BEST Zagreb logo" src="../../images/logo.gif" /></a>
+  <h1>Izmijeni suradnju s Tiha Analitika d.o.o.</h1>
+  <form accept-charset="UTF-8" action="#" onsubmit="return false" class="nice" id="edit_collaboration_96" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="c6M4lMcxXkeReFlh2Aw7IPfWoCjQSMuRfD4M1SoBEfU=" /></div>
+        <fieldset>
+          <p>
+            Projekt:
+            <a href="../../projects/4.html">Uzorak: inženjerski dani</a>
+          </p>
+          <p>
+            Kompanija:
+            <a href="../../companies/25.html">Tiha Analitika d.o.o.</a>
+          </p>
+          <p>
+            <label for='collaboration_type'>Tip suradnje</label>
+            <select id='collaboration_type' name='collaboration[type]'>
+              <option value=''></option>
+              <option value='financijska'>financijska</option>
+              <option value='materijalna'>materijalna</option>
+              <option value='edukacija'>edukacija</option>
+            </select>
+          </p>
+          <p>
+            <input name='collaboration[priority]' type='hidden' value='false' />
+            <label>
+              <input name='collaboration[priority]' type='checkbox' value='true' />
+              Prioritet
+            </label>
+          </p>
+          <p>
+            <label for='collaboration_responsible'>Odgovoran</label>
+            <input id='collaboration_responsible' name='collaboration[responsible]' type='text' value='Ivan U.' />
+          </p>
+          <p>
+            <label for='collaboration_person_id'>Kontakt</label>
+            <select id='collaboration_person_id' name='collaboration[person_id]'>
+              <option value=''></option>
+              <option value='46'>Matej Uzorak</option>
+              <option selected value='47'>Marko Probni</option>
+            </select>
+          </p>
+          <p>
+            <input name='collaboration[contact_in_future]' type='hidden' value='false' />
+            <label>
+              <input name='collaboration[contact_in_future]' type='checkbox' value='true' />
+              Kontaktirati u budućnosti
+            </label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <p>
+            <input name='collaboration[contacted]' type='hidden' value='false' />
+            <label>
+              <input name='collaboration[contacted]' type='checkbox' value='true' />
+              Kontaktirani prvi put
+            </label>
+          </p>
+          <p>
+            <input name='collaboration[letter]' type='hidden' value='false' />
+            <label>
+              <input name='collaboration[letter]' type='checkbox' value='true' />
+              Poslan dopis za suradnju
+            </label>
+          </p>
+          <p>
+            <input name='collaboration[meeting]' type='hidden' value='false' />
+            <label>
+              <input name='collaboration[meeting]' type='checkbox' value='true' />
+              Dogovoren sastanak
+            </label>
+          </p>
+          <label>
+            <input checked name='collaboration[successful]' type='radio' value=''>
+            neizvjesno
+          </label>
+          <label>
+            <input name='collaboration[successful]' type='radio' value='true'>
+            uspješno
+          </label>
+          <label>
+            <input name='collaboration[successful]' type='radio' value='false'>
+            odbijeno
+          </label>
+                <p>
+                  <label for='collaboration_amount'>Vrijednost ostvarene suradnje (kn)</label>
+                  <input id='collaboration_amount' name='collaboration[amount]' type='text' />
+                </p>
+                <p>
+                  <label for='collaboration_comment'>Komentar</label>
+                  <textarea id='collaboration_comment' name='collaboration[comment]'>Dogovoren sastanak.</textarea>
+                </p>
+        </fieldset>
+        <fieldset class='actions'>
+          <a href="#" title="Brisanje nije moguće u arhivi">Izbriši suradnju</a>
+          <input name="commit" type="submit" value="Izmijeni" />
+        </fieldset>
+      </form>
+
+

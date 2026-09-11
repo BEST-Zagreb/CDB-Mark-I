@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Stvori novu suradnju — Baza kompanija</title>
+  <meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="c6M4lMcxXkeReFlh2Aw7IPfWoCjQSMuRfD4M1SoBEfU="/>
+  <link href="../stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
+  <script src="../javascripts/prototype.js" type="text/javascript"></script>
+<script src="../javascripts/effects.js" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js" type="text/javascript"></script>
+<script src="../javascripts/controls.js" type="text/javascript"></script>
+<script src="../javascripts/rails.js" type="text/javascript"></script>
+<script src="../javascripts/livevalidation_prototype.js" type="text/javascript"></script>
+<script src="../javascripts/sortable.js" type="text/javascript"></script>
+<script src="../javascripts/application.js" type="text/javascript"></script>
+<body>
+  <a id="logo" href='../index.html'><img alt="BEST Zagreb logo" src="../images/logo.gif" /></a>
+  <h1>Stvori novu suradnju</h1>
+  <form accept-charset="UTF-8" action="#" onsubmit="return false" class="nice" id="new_collaboration" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="c6M4lMcxXkeReFlh2Aw7IPfWoCjQSMuRfD4M1SoBEfU=" /></div>
+  <fieldset>
+    <p>
+      <label for='collaboration_project_id'>Projekt</label>
+      <select id='collaboration_project_id' name='collaboration[project_id]'>
+        <option value=''></option>
+        <option value='1'>Demo Job Fair 2010</option>
+        <option value='5'>Fiktivni regionalni sastanak</option>
+        <option value='2'>Ogledni seminar proljeće 2010</option>
+        <option value='3'>Probno natjecanje 2010</option>
+        <option value='4'>Uzorak: inženjerski dani</option>
+      </select>
+    </p>
+            <script type='text/javascript'>
+              var collaboration_project_id = new LiveValidation('collaboration_project_id');
+              collaboration_project_id.add(Validate.Presence);
+            </script>
+    
+    <p>
+      <label for='collaboration_company_id'>Kompanija</label>
+      <select id='collaboration_company_id' name='collaboration[company_id]'>
+        <option value=''></option>
+        <option value='47'>Alfa Automatika d.o.o.</option>
+        <option value='48'>Alfa Mehanika d.o.o.</option>
+        <option value='27'>Alfa Mreža d.o.o.</option>
+        <option value='38'>Alfa Optika d.o.o.</option>
+        <option value='20'>Brza Elektronika j.d.o.o.</option>
+        <option value='41'>Brza Energija j.d.o.o.</option>
+        <option value='26'>Brza Robotika j.d.o.o.</option>
+        <option value='23'>Digitalna Analitika j.d.o.o.</option>
+        <option value='21'>Digitalna Robotika j.d.o.o.</option>
+        <option value='14'>Jadranska Mehanika d.o.o.</option>
+        <option value='3'>Jadranska Robotika d.o.o.</option>
+        <option value='46'>Nova Automatika d.d.</option>
+        <option value='42'>Nova Elektronika d.o.o.</option>
+        <option value='37'>Nova Mreža d.o.o.</option>
+        <option value='18'>Nova Optika d.d.</option>
+        <option value='44'>Nova Robotika d.o.o.</option>
+        <option value='10'>Plava Analitika d.o.o.</option>
+        <option value='1'>Plava Mreža d.o.o.</option>
+        <option value='5'>Plava Tehnika d.o.o.</option>
+        <option value='22'>Prva Analitika d.o.o.</option>
+        <option value='6'>Prva Logistika d.o.o.</option>
+        <option value='35'>Prva Mreža d.o.o.</option>
+        <option value='16'>Sjeverna Analitika d.d.</option>
+        <option value='36'>Sjeverna Automatika j.d.o.o.</option>
+        <option value='45'>Sjeverna Gradnja d.o.o.</option>
+        <option value='2'>Sjeverna Logistika d.o.o.</option>
+        <option value='43'>Sjeverna Mehanika d.o.o.</option>
+        <option selected value='11'>Sjeverna Softver d.o.o.</option>
+        <option value='28'>Sjeverna Tehnika d.o.o.</option>
+        <option value='4'>Solarna Softver d.o.o.</option>
+        <option value='32'>Solarna Tehnika j.d.o.o.</option>
+        <option value='25'>Tiha Analitika d.o.o.</option>
+        <option value='8'>Tiha Logistika j.d.o.o.</option>
+        <option value='39'>Tiha Mreža d.o.o.</option>
+        <option value='17'>Tiha Robotika d.o.o.</option>
+        <option value='15'>Tiha Softver d.o.o.</option>
+        <option value='34'>Zagrebačka Analitika j.d.o.o.</option>
+        <option value='33'>Zagrebačka Automatika d.o.o.</option>
+        <option value='30'>Zagrebačka Elektronika j.d.o.o.</option>
+        <option value='19'>Zagrebačka Energija j.d.o.o.</option>
+        <option value='9'>Zagrebačka Optika d.o.o.</option>
+        <option value='31'>Zagrebačka Robotika d.o.o.</option>
+        <option value='13'>Zelena Energija j.d.o.o.</option>
+        <option value='12'>Zelena Logistika d.d.</option>
+        <option value='29'>Zelena Optika d.d.</option>
+        <option value='24'>Zelena Robotika d.o.o.</option>
+        <option value='7'>Zelena Softver d.o.o.</option>
+        <option value='40'>Zelena Tehnika d.o.o.</option>
+      </select>
+    </p>
+            <script type='text/javascript'>
+              var collaboration_company_id = new LiveValidation('collaboration_company_id');
+              collaboration_company_id.add(Validate.Presence);
+            </script>
+    
+  </fieldset>
+  <fieldset class='actions'>
+    <input name="commit" type="submit" value="Save changes" />
+  </fieldset>
+</form>
+
+
