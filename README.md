@@ -16,6 +16,11 @@ It is static HTML, so nothing can be saved. Submitting a form does nothing, dele
 
 The archived source in the private `CDB-Mark-I` repository was run in a container on Ruby 1.9.3 with a generated SQLite database, crawled with wget, and relinked. Three things were changed on purpose: the fundraising bar used Google's Chart API, which shut down in 2019, and is now drawn inline with the same size and colours; the sort arrows are loaded relative to the page instead of from the server root; and write actions were disarmed as described above. Everything else is the original markup, stylesheets and scripts.
 
+## Hosting
+
+Live at <https://cdb-2010.best.hr/>, served by Cloudflare Workers as static files straight from this repository.
+This repository is archived and read-only: the site it holds is finished. If something must change, unarchive it, push to `main`, and Workers Builds redeploys within a minute or two. Every page carries a museum notice and a noindex header, added at the edge by `banner.js`; the archived files themselves are untouched.
+
 ## Wayback Machine
 
 The application ran at <https://old.cdb.best.hr/>. The Internet Archive's calendar for it is <https://web.archive.org/web/*/https://old.cdb.best.hr/*>.
