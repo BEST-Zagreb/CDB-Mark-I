@@ -1,9 +1,13 @@
 {
-  // Static site on Cloudflare Workers static assets, deployed by Workers Builds on every push to the default branch.
+  // Static archive on Cloudflare Workers static assets, deployed by Workers Builds on every push to the default branch.
+  // banner.js runs first so every HTML page carries the archive notice and a noindex header; the files stay as frozen.
   "name": "cdb-mark-i-museum",
+  "main": "banner.js",
   "compatibility_date": "2026-09-11",
   "assets": {
     "directory": "./",
+    "binding": "ASSETS",
+    "run_worker_first": true,
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
   }
