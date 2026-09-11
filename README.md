@@ -15,3 +15,9 @@ It is static HTML, so nothing can be saved. Submitting a form does nothing, dele
 ## How it was made
 
 The archived source in the private `CDB-Mark-I` repository was run in a container on Ruby 1.9.3 with a generated SQLite database, crawled with wget, and relinked. Three things were changed on purpose: the fundraising bar used Google's Chart API, which shut down in 2019, and is now drawn inline with the same size and colours; the sort arrows are loaded relative to the page instead of from the server root; and write actions were disarmed as described above. Everything else is the original markup, stylesheets and scripts.
+
+## Wayback Machine
+
+The application ran at <https://old.cdb.best.hr/>. The Internet Archive's calendar for it is <https://web.archive.org/web/*/https://old.cdb.best.hr/*>.
+Checked on 2026-09-11: the archive holds nothing for old.cdb.best.hr, and the four URLs it holds for cdb.best.hr are all 401 login walls. Nothing of the application was ever preserved there, and because the original sat behind a login no capture was requested.
+This repository is therefore the only copy of what the application looked like; there is no second copy in the archive.
