@@ -18,7 +18,7 @@ The archived source in the private `CDB-Mark-I` repository was run in a containe
 
 ## Hosting
 
-Live at <https://cdb-2010.best.hr/>, served by Cloudflare Workers as static files straight from this repository.
+Live at <https://2010.cdb.best.hr/>, served by Cloudflare Workers as static files straight from this repository.
 This repository is archived and read-only: the site it holds is finished. If something must change, unarchive it, push to `main`, and Workers Builds redeploys within a minute or two. Every page carries a museum notice and a noindex header, added at the edge by `banner.js`; the archived files themselves are untouched.
 
 ## Wayback Machine
