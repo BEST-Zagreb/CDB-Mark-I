@@ -1,0 +1,7 @@
+- @title = "Dodaj kompaniju"
+
+= form_for @company, :html => {:class => 'nice'} do |form|
+  = render form
+  %fieldset.actions
+    = submit_tag 'Dodaj'
+

@@ -1,0 +1,27 @@
+<table id="collaborations" class="sortable">
+  <tr>
+    <th>Ime kompanije</th>
+    <th>Odgovoran</th>
+    <th>Status</th>
+    <th class="unsortable">Kontakt</th>
+    <th class="unsortable">Komentar</th>
+    <th class="unsortable">Uredi</th>
+  </tr>
+  
+<% for collaboration in sort_by_priority(@collaborations) %>
+  <tr<%= collaboration.priority?? " class='priority'" : nil %>>
+    <td><%= link_to collaboration.company %></td>
+    <td><%= collaboration.responsible %></td>
+    <td><%= collaboration_status_icon(collaboration) %></td>
+    <td>
+      <% for person in collaboration.company.people %>
+        <% if collaboration.person and person.id == collaboration.person_id %>
+          <%= person.name %>
+        <% end %>
+      <% end %>
+    </td>
+    <td><%= truncate collaboration.comment %></td>
+    <td><a class="edit" href="/collaborations/<%= collaboration.id %>/edit">edit</a></td>
+  </tr>
+<% end %>
+</table>

@@ -1,0 +1,12 @@
+%fieldset
+  - form.field :name, 'Ime kompanije'
+  - form.validate_format :name
+  - form.field :budgeting_month, 'Vrijeme planiranja budžeta', @company.budgeting_month
+  - form.text_area :comment, 'Komentar'
+  - form.field :url, 'Website'
+  - form.field :phone, 'Tel. broj'
+  - form.field :address, 'Adresa'
+  - form.field :zip, 'Poštanski broj'
+  - form.field :city, 'Grad'
+  - form.field :country, 'Država'
+

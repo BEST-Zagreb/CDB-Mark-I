@@ -1,0 +1,8 @@
+- @title = "Izmijeni kontakt #{@person}"
+
+= form_for [@company, @person], :html => {:class => 'nice'} do |form|
+  = render form
+  %fieldset.actions
+    = delete_link [@company, @person], 'kontakt'
+    = submit_tag 'Izmijeni'
+

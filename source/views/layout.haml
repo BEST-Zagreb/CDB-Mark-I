@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %meta{ 'http-equiv' => "Content-Type", :content => "text/html; charset=UTF-8" }
+    %title&= page_title @title
+    %link{ :rel => "stylesheet", :href => "/screen.css", :type => "text/css", :media => "screen" }
+    %script{ :src => '/prototype.js' }
+    %script{ :src => '/rails.js' }
+    %script{ :src => '/livevalidation_prototype.js' }
+
+  %body
+    %a#logo{ :href => '/' }= image_tag 'logo.gif', :alt => 'BEST Zagreb logo'
+    - if @title
+      %h1&= @title
+    = yield

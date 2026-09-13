@@ -1,0 +1,10 @@
+source 'http://rubygems.org'
+
+gem 'rails', '~> 3.0.0'
+
+gem 'dm-core', '~> 1.0'
+gem 'dm-constraints'
+gem 'dm-timestamps'
+gem 'dm-sqlite-adapter'
+gem 'dm-active_model'
+gem 'haml'

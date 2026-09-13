@@ -1,0 +1,14 @@
+<form action="<%= request.path %>" method="get" id="filter">
+  <fieldset>
+    <p>Pretraživanje:</p>
+    <ul>
+      <li><%= filter_checkbox('contacted', '<span class="unicon-small">☎</span> Kontaktirano') %></li>
+      <li><%= filter_checkbox('letter', '<span class="unicon-small">✉</span> Dopis') %></li>
+      <li><%= filter_checkbox('meeting', '<span class="unicon-small">◷</span> Sastanak') %></li>
+      <li><%= filter_checkbox('successful', '<span class="unicon">€€</span> Uspješno') %></li>
+    </ul>
+  </fieldset>
+  <fieldset class="actions">
+    <input type="submit">
+  </fieldset>
+</form>

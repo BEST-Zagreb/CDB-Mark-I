@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+  <title><%= page_title @title %></title>
+  <link rel="stylesheet" href="/screen.css" type="text/css" media="screen">
+  <script src='/prototype.js'></script> 
+  <script src='/rails.js'></script>
+  <script src='/sortable.js'></script>
+  <script src='/livevalidation_prototype.js'></script>
+<body>
+  <a id="logo" href='/'><%= image_tag 'logo.gif', :alt => 'BEST Zagreb logo' %></a>
+  <% if @title %><h1><%= @title %></h1><% end %>
+  <%= yield %>

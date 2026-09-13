@@ -1,0 +1,7 @@
+- @title = "Novi kontakt za #{@company.name}"
+
+= form_for [@company, @person], :html => {:class => 'nice'} do |form|
+  = render form
+  %fieldset.actions
+    = submit_tag 'Stvori'
+

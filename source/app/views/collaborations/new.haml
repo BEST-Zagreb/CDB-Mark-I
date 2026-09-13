@@ -1,0 +1,11 @@
+- @title = "Stvori novu suradnju"
+
+= form_for @collaboration, :html => {:class => 'nice'} do |form|
+  %fieldset
+    - form.field :project_id, 'Projekt', @projects
+    - form.validate_presence :project_id
+    - form.field :company_id, 'Kompanija', @companies
+    - form.validate_presence :company_id
+  %fieldset.actions
+    = submit_tag
+

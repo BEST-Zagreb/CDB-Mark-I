@@ -1,0 +1,16 @@
+<% @title = "BEST baza kompanija" %>
+
+<ul class="actions">
+  <li><a href="/projects/new">Novi projekt</a></li>
+  <li><a href="/companies">Popis kompanija</a></li>
+</ul>
+
+<% if @projects.empty? %>
+  <p>Nema projekata u bazi.</p>
+<% else %>
+  <ol id="projects">
+    <% for project in @projects %>
+      <li><%= link_to project %></li>
+    <% end %>
+  </ol>
+<% end %>

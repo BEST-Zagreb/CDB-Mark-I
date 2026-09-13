@@ -1,0 +1,7 @@
+- @title = "Izmijeni projekt #{@project}"
+
+= form_for @project, :html => {:class => 'nice'} do |form|
+  = render form
+  %fieldset.actions
+    = submit_tag 'Izmijeni'
+

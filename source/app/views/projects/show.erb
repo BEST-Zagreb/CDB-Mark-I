@@ -1,0 +1,17 @@
+<% @title = @project.name %>
+
+<ul class="actions">
+  <li><a href="<%= project_path @project %>/edit">Izmijeni projekt</a></li>
+  <li><a href="/collaborations/new?project_id=<%= @project.id %>">Dodaj suradnju</a></li>
+</ul>
+
+<% unless @project.fr_goal.nil? %>
+  <%= render "progress_bar" %>
+<% end %>
+
+<% if @collaborations.any? %>
+  <%= render "collaborations" %>
+  <%= render "filter_form" %>
+<% else %>
+  <p>U ovom projektu nema još suradnji.</p>
+<% end %>

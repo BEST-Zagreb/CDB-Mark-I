@@ -1,0 +1,20 @@
+<% @title = "Kompanije" %>
+
+<ul class="actions">
+  <li><a href="/companies/new">Nova kompanija</a></li>
+</ul>
+
+<% if @companies.empty? %>
+  <p>Nema kompanija u bazi.</p>
+<% else %>
+  <% @companies.sort! {|a,b| a.name.downcase <=> b.name.downcase } %>
+  <table id="companies">
+    <% for company in @companies %>
+      <tr>
+        <td><%= link_to company %></td>
+        <td><%= company.comment %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+

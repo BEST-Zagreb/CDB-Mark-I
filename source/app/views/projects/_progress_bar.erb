@@ -1,0 +1,14 @@
+<% achieved = 0 %>
+<% for collaboration in @project.collaborations %>
+  <% unless collaboration.amount.blank? %>
+    <% achieved += collaboration.amount %>
+  <% end %>
+<% end %>
+
+<table id="progress_bar">
+  <tr>
+    <td>Postignuto: <%= achieved %> kn</td>
+    <td><img alt="" src="http://chart.apis.google.com/chart?cht=bhs&amp;chs=485x20&amp;chco=69CD28,FFF0BE&amp;chd=t:<%= achieved %>|<%= @project.fr_goal %>&amp;chds=0,<%= @project.fr_goal %>&amp;chf=bg,s"></td>
+    <td>Cilj: <%= @project.fr_goal %> kn</td>
+  </tr>
+</table>

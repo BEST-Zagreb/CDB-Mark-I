@@ -1,0 +1,8 @@
+- @title = "Izmijeni kompaniju #{@company}"
+
+= form_for @company, :html => {:class => 'nice'} do |form|
+  = render form
+  %fieldset.actions
+    = delete_link company_path(@company), 'kompaniju'
+    = submit_tag 'Izmijeni'
+

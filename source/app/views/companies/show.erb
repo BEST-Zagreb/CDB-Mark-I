@@ -1,0 +1,75 @@
+<% @title = @company.name %>
+
+<ul class="actions">
+  <li><a href="<%= company_path @company %>/edit">Izmijeni kompaniju</a></li>
+  <li><a href="<%= company_path @company %>/people/new">Novi kontakt</a></li>
+  <li><a href="/collaborations/new?company_id=<%= @company.id %>">Nova suradnja</a></li>
+</ul>
+
+<dl>
+  <% unless @company.url.blank? %>
+  <dt>Web</dt>
+  <dd><a href="http://<%= @company.url %>"><%= @company.url %></a></dd>
+  <% end %>
+  <% if @company.address? %>
+  <dt>Adresa</dt>
+  <dd><%= @company.address_components.join('<br>').html_safe %></dd>
+  <% end %>
+  <% unless @company.phone.blank? %>
+  <dt>Tel. broj</dt>
+  <dd><%= @company.phone %></dd>
+  <% end %>
+  <% unless @company.budgeting_month.blank? %>
+  <dt>Planiranje budžeta</dt>
+   <dd><%= @company.budgeting_month %></dd>
+  <% end %>
+  <% unless @company.comment.blank? %>
+  <dt>Komentar</dt>
+    <dd class="nice"><%= @company.comment %></dd>
+  <% end %>
+</dl>
+
+<% if @company.people.any? %>
+  <p>Kontakti</p>
+  <ol>
+   <% for person in @company.people %>
+    <li>
+      <%= person.name %><% unless person.function.blank? %>,
+        <%= person.function %>
+      <% end %>
+      <a href="<%= company_path @company %>/people/<%= person.id %>/edit" class="edit">edit</a><br>
+      <% unless person.email.blank? %>
+        <%= mail_to person.email %>
+      <% end %>
+      <% unless person.phone.blank? %>
+        tel. <%= person.phone %>
+      <% end %>
+    </li>
+   <% end %>
+  </ol>
+<% end %>
+
+<% if @company.collaborations.any? %>
+<p>Prošlost suradnji:</p>
+<ol>
+  <% for collaboration in @company.collaborations %>
+    <li>
+      <a href="<%= project_path(collaboration.project) %>"><span title ="<%= collaboration.comment %>"><%= collaboration.project.name %></span></a>
+      <a href="<%= collaboration_path(collaboration) %>/edit" class="edit">edit</a>
+      <br>Status: <%= collaboration_status_icon(collaboration) %>
+      <% unless collaboration.amount.blank? %>
+        <br> Vrijednost suradnje: <%= collaboration.amount %> kn
+      <% end %>
+      <% for person in collaboration.company.people %>
+        <% if collaboration.person and person.id == collaboration.person_id %>
+          <br>Kontakt: <%= person.name %>
+        <% end %>
+      <% end %>
+      <% unless collaboration.responsible.blank? %>
+        <br>Odgovoran: <%= collaboration.responsible %>
+      <% end %>
+    </li>
+  <% end %>
+</ol>
+<% end %>
+

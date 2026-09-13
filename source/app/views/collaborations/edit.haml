@@ -1,0 +1,42 @@
+- @title = "Izmijeni suradnju s #{@collaboration.company}"
+
+= form_for @collaboration, :html => {:class => 'nice'} do |form|
+  %fieldset
+    %p
+      Projekt:
+      = link_to @collaboration.project
+    %p
+      Kompanija:
+      = link_to @collaboration.company
+    - form.field :type, 'Tip suradnje', @collaboration.type
+
+    - form.field :priority, 'Prioritet'
+    - form.field :responsible, 'Odgovoran'
+
+    - if @collaboration.company.people.any?
+      - form.field :person_id, 'Kontakt', @collaboration.company.people
+
+    - form.field :contact_in_future, 'Kontaktirati u budućnosti'
+
+  %fieldset
+    - form.field :contacted, 'Kontaktirani prvi put'
+    - form.field :letter, 'Poslan dopis za suradnju'
+    - form.field :meeting, 'Dogovoren sastanak'
+
+    %label
+      %input{ :type => 'radio', :checked => @collaboration.pending?, :name => 'collaboration[successful]', :value => '' }
+      neizvjesno
+    %label
+      %input{ :type => 'radio', :checked => @collaboration.successful?, :name => 'collaboration[successful]', :value => 'true' }
+      uspješno
+    %label
+      %input{ :type => 'radio', :checked => @collaboration.unsuccessful?, :name => 'collaboration[successful]', :value => 'false' }
+      odbijeno
+
+    - form.field :amount, 'Vrijednost ostvarene suradnje (kn)'
+    - form.text_area :comment, 'Komentar'
+
+  %fieldset.actions
+    = delete_link collaboration_path(@collaboration), 'suradnju'
+    = submit_tag 'Izmijeni'
+
